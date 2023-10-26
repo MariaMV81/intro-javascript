@@ -6,7 +6,13 @@
  */
 
 function parImparNulo() {
- //Escribe tu codigo aqui
+ if ( num === 0){
+    console.log(`El número introducido es 0`)
+ } else if ( num % 2 === 0){
+    console.log(`El número introducido es par : ${num}`)
+ } else{
+    console.log(`El número intruducido es impar: ${num}`)
+ }
 }
 
 module.exports = { parImparNulo };

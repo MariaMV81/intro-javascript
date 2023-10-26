@@ -7,7 +7,20 @@
  */
 
 function cambioCliente() {
- //Escribe tu codigo aqui
+
+    let precioProducto = 250;
+    let entrega;
+    
+    cambio = entrega - precioProducto;
+
+    if (entrega === precioProducto){
+        console.log("Gracias por su compra")
+    } else if ( entrega > precioProducto) {
+        console.log(`Lo siento le faltan ${precioProducto - entrega} €`)
+    }else {
+        console.log(`Aquí tiene su cambio ${cambio}, gracias por su compra.`)
+    }
+ 
 }
 
 module.exports = { cambioCliente };

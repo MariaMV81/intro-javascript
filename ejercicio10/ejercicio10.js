@@ -14,7 +14,27 @@
  */
 
 function nuevoSalario() {
-  //Escribe tu codigo aqui
+  let readline = require("readline-sync"); 
+
+  let salario = Number(readline.question("Introduzca su salario: "));
+  let categoria = Number(readline.question("Introduzca su categoría (1, 2, 3, o 4): "));
+  
+  if (categoria === 1) {
+    salario = salario * 1.15;
+  } else if (categoria === 2) {
+    salario = salario * 1.1;
+  } else if (categoria === 3) {
+    salario = salario * 1.06;
+  } else if (categoria === 4) {
+    salario = salario * 1.03;
+  } else {
+    console.log("Su salario no tiene bonificación");
+  }
+
+  console.log(`Su nuevo salario es: ${salario}`);
 }
+
+  
+
 
 module.exports = { nuevoSalario };
