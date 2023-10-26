@@ -24,8 +24,8 @@ function divide(a,b) {
 }
 divide(8,2)
 
-function total(sum, substract, multiply, divide) {
-return sum + substract + multiply + divide;
+function total(a,b) {
+return sum(a, b) + substract(a, b) + multiply(a, b) + divide(a, b);
 }
 total(8,2)
 
