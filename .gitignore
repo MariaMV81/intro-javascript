@@ -132,3 +132,8 @@ dist
 # lock files
 *lock.json
 *.lock
+
+#Ejercicios de clase (se pone en gris cuando esta instalado al ponerlo en el gitignore)
+
+node_modules 
+package-lock.json

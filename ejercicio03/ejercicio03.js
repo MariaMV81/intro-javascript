@@ -5,13 +5,8 @@
  * Recuerda usar la estructura condicional If.
  */
 
-const { CLIENT_RENEG_LIMIT } = require("tls");
 
-function compareThreeNumbers() {
-  
-    let num1;
-    let num2;
-    let num3;
+function compareThreeNumbers(num1, num2, num3) {
 
  if (num1 > num2 && num1 > num3){
   console.log(`El número mayor es: ${num1}`)
@@ -24,6 +19,7 @@ function compareThreeNumbers() {
  }
 }
 
-compareThreeNumbers(3,5,7)
+const resultado = compareThreeNumbers(3, 5, 7);
+console.log(resultado);
 
 module.exports = { compareThreeNumbers };

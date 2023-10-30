@@ -19,8 +19,24 @@
  *  1 galon = 3,78541 litros
  */
 
-function precioEnLitros() {
-  //Escribe tu codigo aqui
+function precioEnLitros(galonesSurtidos) {
+  // Precio de la gasolina por litro en euros
+  const precioPorLitro = 1.333;
+
+  // Cantidad de litros en un galón
+  const litrosPorGalon = 3.78541;
+
+  // Convertir los galones a litros
+  const litrosSurtidos = galonesSurtidos * litrosPorGalon;
+
+  // Calcular el costo total
+  const costoTotal = litrosSurtidos * precioPorLitro;
+
+  return `El costo total es de ${costoTotal} euros.`;
 }
+
+const galonesSurtidos = 10;
+const resultado = precioEnLitros(galonesSurtidos);
+console.log(resultado);
 
 module.exports = { precioEnLitros };
