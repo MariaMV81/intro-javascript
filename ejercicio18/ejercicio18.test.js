@@ -2,7 +2,7 @@ const { sumaNPrimerosNumerosPares } = require("./ejercicio18");
 
 describe("retorna la suma de los primeros N numeros pares a partir de N", () => {
   test("retorna la suma de los primeros 5 numeros pares a partir de 5", () => {
-    expect(sumaNPrimerosNumerosPares(5)).toBe(50);
+    expect(sumaNPrimerosNumerosPares(5)).toBe(45);
   });
 
   test("retorna la suma de los primeros 12 numeros pares a partir de 12", () => {

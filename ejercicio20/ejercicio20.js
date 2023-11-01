@@ -10,28 +10,22 @@
  *  del programa.
  */
 
-function adivinarContrasena() {
-  let readline = require("readline-sync"); 
-  const clave = "Eureka";
+function adivinarContrasena(claves, contrasenaCorrecta) {
+  //const contrasenaCorrecta = "eureka";
+  let intentos = 3;
 
-  let contraseña;
-  let intentos = 0;
-
-  do {
-    // entra en el bucle
-    contraseña = require("Introdude tu contraseña: "); //solicita por pantalla que escriba por teclado "introc..." y lo que se escriba lo guarda en la var contraseña
-    if (contraseña === clave) {
-      //si lo que he escrito por pantalla es igual a Eureca ,
-      intentos = 4; // le doy a intentos el valor 4 para que salga del bucle
+  for (let i = 0; i < intentos; i++) {
+    const contrasena = claves[i];
+    if (contrasena === contrasenaCorrecta) {
+      console.log("Contraseña correcta, bienvenido");
+      return;
+    } else {
+      return "Contraseña incorrecta, intento " + (i + 1) + " de " + intentos + ". Inténtalo de nuevo.";
     }
-    intentos++; //este es el contador del bucle, que se va incrementando en 1 segun el numero de vece que se entre en el bucle
-  } while (intentos < 4); // aqui compruebo si tengo que salir o no del bucle
-  /* cuando sale del bucle, intentos vale 3 si no se ha acertado la clave o 5 si se ha acertado la clave */
-  if (intentos === 4) {
-    console.log("Has agotado tus intentos");
-  } else {
-    console.log("Has acertado!!!");
   }
+
+  return "Has agotado tus intentos";
 }
 
 module.exports = { adivinarContrasena };
+
