@@ -12,12 +12,6 @@
 
 function adivinarContrasena() {
   let readline = require("readline-sync"); 
-
-  let numeroUno = Number(readline.question("Dime un numero: "));
-  let numeroDos = Number(readline.question("Dime otro numero: "));
-  let numeroTres = Number(readline.question("Dime un tercer numero: "));
-
- 
   const clave = "Eureka";
 
   let contraseña;

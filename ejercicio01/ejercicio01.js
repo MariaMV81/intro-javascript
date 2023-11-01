@@ -17,4 +17,5 @@ function swapVariables(a, b) {
   
 }
 
+swapVariables(1, 2);
 module.exports = { swapVariables };

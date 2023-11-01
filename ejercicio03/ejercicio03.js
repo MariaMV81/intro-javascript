@@ -9,17 +9,17 @@
 function compareThreeNumbers(num1, num2, num3) {
 
  if (num1 > num2 && num1 > num3){
-  console.log(`El número mayor es: ${num1}`)
- } else if ( num2 > num1 && num2 > num3){
-  console.log(`El número mayor es: ${num2}`)
+  return num1;
+ } else if ( num2 > num1 && num2 == num3){
+  return num2;
  } else if ( num3 > num1 && num3 > num2){
-  console.log(`El número mayor es: ${num3}`)
+  return num3;
  } else{
-  console.log("Los números son iguales")
+  return "iguales";
  }
 }
 
-const resultado = compareThreeNumbers(3, 5, 7);
-console.log(resultado);
+
+
 
 module.exports = { compareThreeNumbers };

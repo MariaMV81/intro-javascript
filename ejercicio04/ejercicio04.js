@@ -6,21 +6,23 @@
  *  que diga Has introducido uno o varios caracteres no validos
  */
 
-function sumOrMultiply() {
-    let a;
-    let b;
-    let c;
+const { number } = require("yargs");
 
-    producto = a * b * c;
-    sum = a + b + c;
+function sumOrMultiply(a, b, c) {
 
- if (a < 0) {
-    console.log(`El primer número es negativo, en este caso se procederá a realizar el producto de los tres ${producto}`)
- } else if ( a > 0){
-    console.log(`Todos los números son positivos, este es el resultado de la suma: ${sum}`)
- } else {
-    console.log("Ha introducido uno o varios caracteres no válidos")
- }
+    
+   if (typeof a !== "number" || typeof b !== "number" || typeof c !== "number") {
+     return "Has introducido uno o varios caracteres no validos"; //Cuidado con los acentos, sino estan en el archivo del test da error el ejercicio
+   }
+
+   if (a < 0){
+      return a * b * c;
+   }else {
+      return a + b + c;
+   }
+
+  
 }
+
 
 module.exports = { sumOrMultiply };
