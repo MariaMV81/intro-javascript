@@ -6,18 +6,21 @@
  *  numero.
  */
 
-function determinarTipoNumero() {
+function determinarTipoNumero(num) {
  
 
- if (num < 0){
-    console.log(`El número instroducido es negativo`)
- } else if ( a > 0){
-    console.log(`El número introducido es positivo`)
- } else if ( a === 0){
-    console.log(`El número introducido es nulo`)
- } else {
-    console.log(`No ha introducido un número`)
- }
+if (num > 0) {
+  return "El numero es positivo";
+} else if (typeof num !== "number" || isNaN(num)) {
+  return "No has introducido un numero";
+} else if (num < 0) {
+  return "El numero es negativo";
+} else {
+  return "El numero es nulo";
+}
+
 }
 
 module.exports = { determinarTipoNumero };
+
+//CORREGIR Me da fallo en el ultimo 

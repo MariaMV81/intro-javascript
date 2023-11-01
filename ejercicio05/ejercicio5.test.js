@@ -1,7 +1,7 @@
 const { determinarTipoNumero } = require("./ejercicio05");
 
 describe("retorna un string indicando si el numero introducido es positivo, negativo, nulo o si no es un numero", () => {
-  test("retorna un string indicando que el numero introducido es positovo", () => {
+  test("retorna un string indicando que el numero introducido es positivo", () => {
     expect(determinarTipoNumero(1)).toBe("El numero es positivo");
   });
 

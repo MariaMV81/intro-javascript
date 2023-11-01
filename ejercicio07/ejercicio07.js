@@ -6,19 +6,17 @@
  *  una cantidad de dinero insuficiente.
  */
 
-function cambioCliente() {
+function cambioCliente(entrega, precioProducto) {
 
-    let precioProducto = 250;
-    let entrega;
     
-    cambio = entrega - precioProducto;
+    const cambio = entrega - precioProducto;
 
-    if (entrega === precioProducto){
-        console.log("Gracias por su compra")
-    } else if ( entrega > precioProducto) {
-        console.log(`Lo siento le faltan ${precioProducto - entrega} €`)
+    if (cambio === 0){
+        return "Gracias por su compra";
+    } else if ( cambio < 0) {
+        return "pago insuficiente";
     }else {
-        console.log(`Aquí tiene su cambio ${cambio}, gracias por su compra.`)
+        return cambio;
     }
  
 }
