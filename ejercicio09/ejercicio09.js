@@ -7,33 +7,39 @@
  *  diciendo 'Debes introducir sólo números. Inténtalo de nuevo'
  */
 
-function notaMedia() {
-  
-  let readline = require("readline-sync"); /** Esto sirve para importar la libreria*/
+function notaMedia(
+  calificacion1,
+  calificacion2,
+  calificacion3,
+  calificacion4,
+  calificacion5
+) {
+  // Verificar si todas las calificaciones son números.
+  if (
+    isNaN(calificacion1) ||
+    isNaN(calificacion2) ||
+    isNaN(calificacion3) ||
+    isNaN(calificacion4) ||
+    isNaN(calificacion5)
+  ) {
+    return "Debes introducir solo numeros. Intentalo de nuevo";
+  }
 
-  let calificacion1 = Number(readline.question("Primera calificación: "));
-  let calificacion2 = Number(readline.question("Segunda calificación: "));
-  let calificacion3 = Number(readline.question("Tercera calificación: "));
-  let calificacion4 = Number(readline.question("Cuarta calificación: "));
-  let calificacion5 = Number(readline.question("Quinta calificación: "));
-
-  let suma =
+  // Calcular la suma y la media de las calificaciones.
+  const suma =
     calificacion1 +
     calificacion2 +
     calificacion3 +
     calificacion4 +
     calificacion5;
+  const media = suma / 5;
 
-  let media;
-  media = suma / 5;
-
-  if (promedio >= 5){
-    console.log(`Aprovado!!! Su nota media es: ${media}`)
-  } else if (promedio < 5){
-    console.log(`Suspenso, Su nota media es:${media}`)
-  } else{
-    console.log("Debes introducir sólo números. Inténtalo de nuevo");
+  if (media >= 5) {
+    return `${media} aprobado` ;
+  } else {
+    return `${media} suspenso`;
   }
 }
 
 module.exports = { notaMedia };
+
