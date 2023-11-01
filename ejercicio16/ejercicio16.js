@@ -6,7 +6,15 @@
  */
 
 function cuadraroNumerosNaturales() {
-  //Escribe tu codigo aqui
+  const result = [];
+  for (let i = 0; i <= 9; i++){
+    result.push(i**2); //esto agrega el valor calculado en el paso anterior al final del array
+
+  }
+  return result;
 }
 
 module.exports = { cuadraroNumerosNaturales };
+
+
+//en este caso "result" es un array que se usa para almacenar.

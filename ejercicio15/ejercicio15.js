@@ -5,22 +5,23 @@
  */
 
 
-const prompt = require("prompt-sync")();
+let readline = require("readline-sync");
 
-let number = Number(prompt("Introduce un número: "));
+// let introduceNumero = Number(readline.question("Dime un numero: "));
 
-function parImparNulo() {
-  
+function parImparNulo(number) {
 
   while (number === 0) {
-    number = Number(prompt("Introduce un número: "));
+    number = Number(readline.question("Introduce otro numero distinto de 0: "));
   }
 
-  if (number % 2 === 0) {
-    console.log("El número es par");
+  if (number % 2 == 0) {
+    return "El numero es par";
   } else {
-    console.log("El número es impar");
+    return "El numero es impar";
   }
 }
 
 module.exports = { parImparNulo };
+
+//No soy capaz de ponerlo bien

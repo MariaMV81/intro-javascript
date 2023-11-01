@@ -12,17 +12,12 @@ function calcularSuperficie(base, altura) {
 }
 
 function calcularPerimetro(base, altura) {
-  const perimetro = 2 * (base + altura);
-  return `El perímetro es de ${perimetro}`;
+  const perimetro = (base + altura);
+  return `El perimetro es de ${perimetro}`;
 }
 
-const base = 5;
-const altura = 3;
 
-const superficieResultado = calcularSuperficie(base, altura);
-const perimetroResultado  = calcularPerimetro(base, altura);
-
-console.log(superficieResultado);
-console.log(perimetroResultado);
 
 module.exports = { calcularPerimetro, calcularSuperficie };
+
+//Consultar porque no funciona con el 2 * (base + altura)

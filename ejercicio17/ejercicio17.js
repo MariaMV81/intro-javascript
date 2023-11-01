@@ -6,7 +6,15 @@
  */
 
 function calcularSumaNumerosNaturales(N) {
-  //Escribe tu codigo aqui
+
+  let suma = 0;
+
+
+ for (let i = 1; i <= N; i++){
+    suma += i;
+ }
+return suma;
 }
+
 
 module.exports = { calcularSumaNumerosNaturales };

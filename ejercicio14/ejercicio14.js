@@ -32,11 +32,8 @@ function precioEnLitros(galonesSurtidos) {
   // Calcular el costo total
   const costoTotal = litrosSurtidos * precioPorLitro;
 
-  return `El costo total es de ${costoTotal} euros.`;
+  return costoTotal;
 }
 
-const galonesSurtidos = 10;
-const resultado = precioEnLitros(galonesSurtidos);
-console.log(resultado);
 
 module.exports = { precioEnLitros };

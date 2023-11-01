@@ -13,30 +13,33 @@
  *  descuento correspondiente.
  */
 
-function descuentoCompra(monto) {
+function descuentoCompra(monto, descuento) {
   
-  let descuento = 0;
-  let montoFinal;
+  
 
   if (monto < 500) {
     descuento = 0;
     montoFinal = monto;
+    return montoFinal;
   } else if (monto <= 1000) {
     descuento = 5;
     montoFinal = monto * 0.95;
+    return montoFinal;
   } else if (monto <= 7000) {
     descuento = 10;
     montoFinal = monto * 0.9;
+    return montoFinal;
   } else if (monto <= 15000) {
     descuento = 20;
     montoFinal = monto * 0.8;
+    return montoFinal;
   } else {
     descuento = 25;
     montoFinal = monto * 0.75;
+    return montoFinal;
   }
-  console.log(
-    `Tienes un ${descuento}% de descuento. El total a pagar es: ${montoFinal}`
-  );
+  
+
 }
 
 const montoCompra = 3500;
