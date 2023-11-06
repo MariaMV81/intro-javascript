@@ -7,8 +7,19 @@
  *  Es decir, para N = 5, el factorial seria 5! = 5*4*3*2*1 = 120;
  */
 
-function factorialNumero() {
-  //Escribe tu codigo aqui
+function factorialNumero(N) {
+   if (N < 0) {
+    return "No se puede calcular el factorial de un número negativo";
+  } else if (N === 0 || N === 1) {
+    return 1;
+  } else {
+    let factorial = 1;
+    for (let i = 2; i <= N; i++) {
+      factorial *= i;
+    }
+    return factorial;
+  }
 }
+
 
 module.exports = { factorialNumero };

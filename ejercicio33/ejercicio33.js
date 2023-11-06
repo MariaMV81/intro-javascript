@@ -5,8 +5,10 @@
  *  `El indice es X y su valor es Y`
  */
 
-function arrayIndex() {
-  //Escribe tu codigo aqui
+function arrayIndex(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    return `El indice es ${i} y su valor es ${arr[i]}`;
+  }
 }
 
 module.exports = { arrayIndex };

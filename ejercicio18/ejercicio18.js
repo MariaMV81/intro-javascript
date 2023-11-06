@@ -7,13 +7,18 @@
  *  La funcion retornara la suma
  */
 
+
+
+
+
 function sumaNPrimerosNumerosPares(N) {
   let suma = 0;
-  let numero = N;
+  let numero = N; //El número a partir del cual calcular los números pares
 
   for (let i = 0; i < N; i++) {
-    suma += numero;
-    numero += 2;
+    // Calcula el siguiente número par
+    let numeroPar = numero + 2 * i;
+    suma += numeroPar;
   }
 
   return suma;

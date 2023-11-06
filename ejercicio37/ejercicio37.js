@@ -41,8 +41,15 @@
     "E"
  */
 
-function crearDni() {
-  //Escribe tu codigo aqui
+function crearDni(numeroDni) {
+  if (numeroDni >= 0 && numeroDni <= 99999999) {
+    const letrasDNI = "TRWAGMYFPDXBNJZSQVHLCKE";
+    const resto = numeroDni % 23;
+    const letra = letrasDNI.charAt(resto);
+    return `DNI Completo: ${numeroDni}${letra}`;
+  } else {
+    return "Numero de DNI no valido";
+  }
 }
 
 module.exports = { crearDni };

@@ -8,12 +8,28 @@
  */
 
 function generateRandomNumber() {
-  //Escribe tu codigo aqui
+  return Math.floor(Math.random() * 10) + 1; // Genera un número aleatorio del 1 al 10
 }
 
 function playGame(randomNumber, arrayNum) {
-  //Escribe tu codigo aqui
+  let intentos = 0;
+  let encontrado= false;
+
+  while (!encontrado && intentos < arrayNum.length) {
+    if (arrayNum[intentos] === randomNumber) {
+      encontrado= true;
+    } else {
+      intentos++;
+    }
+  }
+
+  if (encontrado) {
+    return `Exacto, has acertado en el ${intentos + 1} intento! el numero era el ${intentos + 1}`;
+  } else {
+    return "Ninguno de los numeros introducido coincide con el creado aleatoriamente";
+  }
 }
+
 module.exports = {
   generateRandomNumber,
   playGame,

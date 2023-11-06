@@ -20,11 +20,11 @@ function adivinarContrasena(claves, contrasenaCorrecta) {
       console.log("Contraseña correcta, bienvenido");
       return;
     } else {
-      return "Contraseña incorrecta, intento " + (i + 1) + " de " + intentos + ". Inténtalo de nuevo.";
+      console.log("Contraseña incorrecta, intentelo de nuevo" ) ;
     }
   }
 
-  return "Has agotado tus intentos";
+  console.log("Has agotado tus intentos");
 }
 
 module.exports = { adivinarContrasena };
