@@ -5,8 +5,48 @@
  * {1: X, 2: Y, 3: Z}
  */
 
-function imprimirDescendente() {
-  //Escribe tu codigo aqui
+function imprimirDescendente(A, B, C) {
+  let mayor, medio, menor;
+
+  if (A > B) {
+    if (A > C) {
+      mayor = A;
+      if (B > C) {
+        medio = B;
+        menor = C;
+      } else {
+        medio = C;
+        menor = B;
+      }
+    } else {
+      mayor = C;
+      medio = A;
+      menor = B;
+    }
+  } else {
+    if (B > C) {
+      mayor = B;
+      if (A > C) {
+        medio = A;
+        menor = C;
+      } else {
+        medio = C;
+        menor = A;
+      }
+    } else {
+      mayor = C;
+      medio = B;
+      menor = A;
+    }
+  }
+
+  const resultado = {
+    1: mayor,
+    2: medio,
+    3: menor,
+  };
+
+  return resultado;
 }
 
 module.exports = { imprimirDescendente };

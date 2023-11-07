@@ -7,8 +7,27 @@
  * '<' y '>'
  */
 
-function ordenarArray() {
-  //Escribe tu codigo aqui
+function ordenarArray(array) {
+  const longitud = array.length;
+
+  for (let i = 0; i < longitud - 1; i++) {
+    let minIndex = i;
+
+    for (let j = i + 1; j < longitud; j++) {
+      if (array[j] < array[minIndex]) {
+        minIndex = j;
+      }
+    }
+
+    if (minIndex !== i) {
+      // Intercambiar los elementos en minIndex e i
+      const temp = array[i];
+      array[i] = array[minIndex];
+      array[minIndex] = temp;
+    }
+  }
+
+  return array;
 }
 
 module.exports = { ordenarArray };

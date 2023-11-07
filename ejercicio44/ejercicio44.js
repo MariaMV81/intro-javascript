@@ -16,8 +16,25 @@
  * EJEMPLO: Si introduce 1,2,4. El usuario recibira 6.
  */
 
-function seleccionarNumeroMenu() {
-  //Escribe tu codigo aqui
+function seleccionarNumeroMenu(opcion, numero1, numero2) {
+  switch (opcion) {
+    case 1: // Sumar
+      return numero1 + numero2;
+    case 2: // Restar
+      return numero1 - numero2;
+    case 3: // Multiplicar
+      return numero1 * numero2;
+    case 4: // Dividir
+      if (numero2 !== 0) {
+        return numero1 / numero2;
+      } else {
+        return "No se puede dividir por cero";
+      }
+    case 5: // Salir
+      return "Has salido correctamente del programa";
+    default:
+      return "No has introducido un numero correcto. El numero debe estar entre 1 y 5";
+  }
 }
 
 module.exports = { seleccionarNumeroMenu };

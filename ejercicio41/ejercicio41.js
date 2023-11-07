@@ -8,11 +8,37 @@
  */
 
 function generarArray() {
-  //Escribe tu codigo aqui
+  const array = [];
+
+  for (let i = 0; i < array.length; i++) {
+    const numeroAleatorio = Math.floor(Math.random() * (numeroMaximo + 1));
+    array.push(numeroAleatorio);
+  }
+
+  return array;
 }
 
-function calculosArray() {
-  //Escribe tu codigo aqui
+function calculosArray(array) {
+  const numerosPositivos = array.filter((numero) => numero > 0);
+  const cantidadPositivos = numerosPositivos.length;
+  const sumaPositivos = numerosPositivos.reduce(
+    (total, numero) => total + numero,
+    0
+  );
+
+  const cantidadTotal = array.length;
+  const sumaTotal = array.reduce((total, numero) => total + numero, 0);
+
+  const promedioPositivos =
+    cantidadPositivos > 0 ? sumaPositivos / cantidadPositivos : 0;
+  const promedioTotal = cantidadTotal > 0 ? sumaTotal / cantidadTotal : 0;
+
+  return {
+    promedioPositivos,
+    cantidadPositivos,
+    promedioTotal,
+  };
 }
+
 
 module.exports = { generarArray, calculosArray };

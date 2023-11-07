@@ -5,8 +5,18 @@
  * condiciones el algoritmo rellenara su hueco con un 0.
  */
 
-function generarVector() {
-  //Escribe tu codigo aqui
+function generarVector(array) {
+    const resultado = [];
+  
+  for (let i = 0; i < array.length; i++) {
+    if (typeof array[i] === 'number' && array[i] % 2 === 0 && array[i] > 25) {
+      resultado[i] = array[i];
+    } else {
+      resultado[i] = 0;
+    }
+  }
+
+  return resultado;
 }
 
 module.exports = { generarVector };

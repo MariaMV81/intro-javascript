@@ -4,7 +4,13 @@
  *  Tendrá la estructura horas:minutos:segundos. Ejemplo de salida: 23:15:39​
  */
 function relojInfinito() {
-  //Escribe tu codigo aqui
+  setInterval(function () {
+    const ahora = new Date();
+    const horaActual = ahora.toLocaleTimeString();
+
+    console.log(horaActual);
+  }, 1000); // Actualizar cada segundo
 }
+
 
 module.exports = { relojInfinito };

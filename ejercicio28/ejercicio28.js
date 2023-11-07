@@ -8,9 +8,9 @@
 function timer(segundos) {
   for (let i = segundos; i >= 0; i--) {
     if (i === 0) {
-      console.log("Ring!!");
+      return"¡¡Ring!!";
     } else {
-      console.log(i);
+      return i;
     }
   }
 }
