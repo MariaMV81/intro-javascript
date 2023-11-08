@@ -1,11 +1,17 @@
 const { cuboNumerosArray } = require("./ejercicio26");
 
-test("lee un array y devuelve el indice y el valor de cada posicion", () => {
-  expect(cuboNumerosArray([1, 2, 3, 4, 5])).toBe(
-    `El cubo de ${1} es ${1}`,
-    `El cubo de ${2} es ${8}`,
-    `El cubo de ${3} es ${27}`,
-    `El cubo de ${4} es ${64}`,
-    `El cubo de ${5} es ${125}`
-  );
+describe("cuboNumerosArray", () => {
+  it("deberia llamar al console.log con los valores esperados", () => {
+    const inputArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    console.log = jest.fn();
+    cuboNumerosArray(inputArray);
+    expect(console.log).toHaveBeenCalledTimes(10);
+    expect(console.log).toHaveBeenNthCalledWith(1, `El cubo de ${1} es ${1}`);
+    expect(console.log).toHaveBeenNthCalledWith(2, `El cubo de ${2} es ${8}`);
+    expect(console.log).toHaveBeenNthCalledWith(6, `El cubo de ${6} es ${216}`);
+    expect(console.log).toHaveBeenNthCalledWith(
+      10,
+      `El cubo de ${10} es ${1000}`
+    );
+  });
 });

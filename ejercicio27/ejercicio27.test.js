@@ -1,15 +1,17 @@
 const { tablaNumero } = require("./ejercicio27");
 
-describe("retorna la tabla de multiplicacion de N", () => {
-  test("retorna la tabla de multiplicacion del numero 5", () => {
-    expect(tablaNumero(5)).toBe(5, 10, 15, 20, 25, 30, 35, 40, 45, 50);
-  });
+describe("Tabla Numero", () => {
+  it("deberia llamar al console.log con los valores esperados", () => {
+    const number = 9;
 
-  test("retorna la tabla de multiplicacion del numero 6", () => {
-    expect(tablaNumero(6)).toBe(6, 12, 18, 24, 30, 36, 42, 48, 54, 60);
-  });
+    console.log = jest.fn();
 
-  test("retorna la tabla de multiplicacion del numero 7", () => {
-    expect(tablaNumero(7)).toBe(7, 14, 21, 28, 35, 42, 49, 56, 63, 70);
+    tablaNumero(number);
+
+    expect(console.log).toHaveBeenCalledTimes(10);
+    expect(console.log).toHaveBeenNthCalledWith(1, 9);
+    expect(console.log).toHaveBeenNthCalledWith(2, 18);
+    expect(console.log).toHaveBeenNthCalledWith(6, 54);
+    expect(console.log).toHaveBeenNthCalledWith(10, 90);
   });
 });
