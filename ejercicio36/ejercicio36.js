@@ -10,7 +10,11 @@
  */
 
 function multiplicarElementosArray() {
-  //Escribe tu codigo aqui
+  let array1 = [];
+  let array2 = [];
+  let resultado = [];
+
+  
 }
 
 module.exports = { multiplicarElementosArray };

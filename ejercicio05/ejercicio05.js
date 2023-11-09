@@ -7,19 +7,17 @@
  */
 
 function determinarTipoNumero(num) {
- 
-
-if (num > 0) {
-  return "El numero es positivo";
-} else if (typeof num !== "number" || isNaN(num)) {
-  return "No has introducido un numero";
-} else if (num < 0) {
-  return "El numero es negativo";
-} else {
-  return "El numero es nulo";
+  if (num > 0) {
+    return "El numero es positivo";
+  } else if (isNaN(num)) {
+    return "No has introducido un numero";
+  } else if (num < 0) {
+    return "El numero es negativo";
+  } else {
+    return "El numero es nulo";
+  }
 }
 
-}
 
 module.exports = { determinarTipoNumero };
 
