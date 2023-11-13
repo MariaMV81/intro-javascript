@@ -6,12 +6,29 @@
  * hasta N
  */
 
-function isPrimeNumber() {
-  //Escribe tu codigo aqui
+function isPrimeNumber(num) {
+  if (num <= 1) {
+    return false;
+  }
+  if (num === 2) {
+    return true;
+  }
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
 }
 
-function getPrimeNumbers() {
-  //Escribe tu codigo aqui
+function getPrimeNumbers(N) {
+  let count = 0;
+  for (let i = 2; i <= N; i++) {
+    if (isPrimeNumber(i)) {
+      count++;
+    }
+  }
+  return`Por debajo de ${N} hay ${count} numeros primos`;
 }
 
 module.exports = { getPrimeNumbers };
